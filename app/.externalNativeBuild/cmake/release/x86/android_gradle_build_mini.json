@@ -1,16 +1,16 @@
 {
   "buildFiles": [
-    "C:\\Users\\yunxi\\Desktop\\ChicVideo\\app\\CMakeLists.txt"
+    "C:\\Users\\chicwalk\\Desktop\\ChicVideo\\app\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "C:\\Users\\yunxi\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\yunxi\\Desktop\\ChicVideo\\app\\.externalNativeBuild\\cmake\\release\\x86 --target clean"
+    "C:\\Users\\chicwalk\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\chicwalk\\Desktop\\ChicVideo\\app\\.externalNativeBuild\\cmake\\release\\x86 --target clean"
   ],
   "libraries": {
     "native-lib-Release-x86": {
       "artifactName": "native-lib",
-      "buildCommand": "C:\\Users\\yunxi\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\yunxi\\Desktop\\ChicVideo\\app\\.externalNativeBuild\\cmake\\release\\x86 --target native-lib",
+      "buildCommand": "C:\\Users\\chicwalk\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\chicwalk\\Desktop\\ChicVideo\\app\\.externalNativeBuild\\cmake\\release\\x86 --target native-lib",
       "abi": "x86",
-      "output": "C:\\Users\\yunxi\\Desktop\\ChicVideo\\app\\build\\intermediates\\cmake\\release\\obj\\x86\\libnative-lib.so"
+      "output": "C:\\Users\\chicwalk\\Desktop\\ChicVideo\\app\\build\\intermediates\\cmake\\release\\obj\\x86\\libnative-lib.so"
     }
   }
 }

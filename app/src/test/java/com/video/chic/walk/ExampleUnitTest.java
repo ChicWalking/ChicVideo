@@ -1,4 +1,4 @@
-package com.video.chic.chicvideo;
+package com.video.chic.walk;
 
 import org.junit.Test;
 
