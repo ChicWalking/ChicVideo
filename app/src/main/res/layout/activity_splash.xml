@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/splash_layout"
+        android:visibility="gone">
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/viewpager"/>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/splash_bottom_back"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/splash_bottom_back"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/splash_bottom_back"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/enter_view"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/guide_button"
+            android:layout_above="@+id/ll"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mrlBigImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/mIVBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/guide_back" />
+
+        <!--<com.facebook.drawee.view.SimpleDraweeView-->
+            <!--android:id="@+id/mIvImage"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="100dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/mTvTime"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:padding="5dp"-->
+            <!--android:text="跳过(3S)"-->
+            <!--android:visibility="gone" />-->
+
+
+    </RelativeLayout>
+</RelativeLayout>
