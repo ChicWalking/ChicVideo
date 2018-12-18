@@ -12,4 +12,11 @@ public class SPUtil {
         final SharedPreferences settings=PreferenceManager.getDefaultSharedPreferences(context);
         return settings.getBoolean(key,defaultValue);
     }
+
+    public static void setPrefBoolean(Context applicationContext, String key, boolean value) {
+        final SharedPreferences settings = PreferenceManager
+                .getDefaultSharedPreferences(applicationContext);
+        settings.edit().putBoolean(key, value).commit();
+
+    }
 }

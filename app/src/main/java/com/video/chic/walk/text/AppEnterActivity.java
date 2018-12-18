@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.video.chic.walk.R;
+import com.video.chic.walk.utils.HasNetWork;
 import com.video.chic.walk.utils.SPUtil;
 
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class AppEnterActivity extends AppCompatActivity implements ViewPager.OnP
         mViewPager = findViewById(R.id.viewpager);
         mEnterView = findViewById(R.id.enter_view);
         mDotsLayout = findViewById(R.id.ll);
-
+        mIvSplash = findViewById(R.id.mrlBigImage);
         mFirstStart = SPUtil.getPrefBoolean(getApplicationContext(),SP_ISFIRST_TIME,true);
         init();
     }
@@ -57,6 +58,7 @@ public class AppEnterActivity extends AppCompatActivity implements ViewPager.OnP
     private void init() {
         if (mFirstStart) {
             mIvSplash.setVisibility(View.GONE);
+            mSplashLayout.setVisibility(View.VISIBLE);
             List<View> views = new ArrayList<View>();
             LinearLayout.LayoutParams mParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
                     LinearLayout.LayoutParams.FILL_PARENT);
@@ -76,12 +78,19 @@ public class AppEnterActivity extends AppCompatActivity implements ViewPager.OnP
             mEnterView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    if(!HasNetWork.isNetworkAvailable(AppEnterActivity.this)){
+                        HasNetWork.showNoWifiDialog(AppEnterActivity.this);
+                        return;
+                    }
+                    SPUtil.setPrefBoolean(getApplicationContext(), SP_ISFIRST_TIME, false);
                     startActivity(new Intent(AppEnterActivity.this, activity.class));
                     AppEnterActivity.this.finish();
                 }
             });
             initDots();
         }else{
+            mIvSplash.setVisibility(View.VISIBLE);
+            mSplashLayout.setVisibility(View.GONE);
 
         }
     }
